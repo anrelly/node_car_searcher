@@ -1,0 +1,109 @@
+{
+  "url": "https://mymycars.com/catalog/page=1;o=propulsionAt:desc;category=legkovi;bodyType=sedan-liftbek-fastbek;bm=price:,4170000&brand:opel",
+  "service": "mymycars",
+  "search": {
+    "pages": {
+      "page_links": {
+        "selector": "div.catalog__items-container div.catalog__products section h2.catalog-product__title a, div.col-lg-8 > div.catalog__products > section h2.catalog-product__title a",
+        "method": {
+          "function": "attr",
+          "args": "href"
+        }
+      },
+      "pagen": {
+        "selector": "aside div.count-btn-box button:eq(0)",
+        "method": {
+          "function": "text",
+          "args": ""
+        }
+      }
+    },
+    "detail": {
+      "published": {
+        "selector": "div.car-short-info div.car-short-info__location span.car-short-info__published",
+        "method": {
+          "function": "text",
+          "args": ""
+        }
+      },
+      "name": {
+        "selector": "div.product-page__title h1",
+        "method": {
+          "function": "text",
+          "args": ""
+        }
+      },
+      "mileage": {
+        "selector": "ul.short-characteristics > li.short-characteristics__item:eq(1) div.short-characteristics__item-val",
+        "method": {
+          "function": "text",
+          "args": ""
+        }
+      },
+      "engine": {
+        "selector": "ul.short-characteristics > li.short-characteristics__item:eq(3) div.short-characteristics__item-val",
+        "method": {
+          "function": "text",
+          "args": ""
+        }
+      },
+      "fuel": {
+        "selector": "ul.short-characteristics > li.short-characteristics__item:eq(2) div.short-characteristics__item-val",
+        "method": {
+          "function": "text",
+          "args": ""
+        }
+      },
+      "price_usd": {
+        "selector": "div.car-short-info div.price-secondary div.price-secondary__item:eq(0)",
+        "method": {
+          "function": "text",
+          "args": ""
+        }
+      },
+      "price_eur": {
+        "selector": "div.car-short-info div.price-secondary div.price-secondary__item:eq(1)",
+        "method": {
+          "function": "text",
+          "args": ""
+        }
+      },
+      "price_grn": {
+        "selector": "div.car-short-info div.car-short-info__price-views div.price",
+        "method": {
+          "function": "text",
+          "args": ""
+        }
+      },
+      "body": {
+        "selector": "ul.short-characteristics > li.short-characteristics__item:eq(0) div.short-characteristics__item-val",
+        "method": {
+          "function": "text",
+          "args": ""
+        }
+      },
+      "location": {
+        "selector": "div.car-short-info div.car-short-info__location > div button",
+        "method": {
+          "function": "text",
+          "args": ""
+        }
+      },
+      "additional": {
+        "selector": "div.car-features ul.car-features__list li span",
+        "method": {
+          "function": "text",
+          "args": ""
+        }
+      }
+    }
+  },
+  "options": {
+    "pagen": {
+      "regex": "page=\\d{1,}",
+      "replaсement": "page=#iterator#",
+      "correction": "0",
+      "separator": ";"
+    }
+  }
+}

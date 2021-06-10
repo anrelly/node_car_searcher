@@ -1,0 +1,130 @@
+{
+  "url": "https://auto.ria.com/search/?fuel.id[1]=2&abroad.not=0&gearbox.id[1]=2&gearbox.id[2]=3&gearbox.id[3]=4&gearbox.id[4]=5&categories.main.id=1&price.USD.lte=40000&custom.not=1&brand.id[0]=56&model.id[0]=47674&indexName=newauto_search,auto,order_auto",
+  "service": "avtoria",
+  "search": {
+    "pages": {
+      "page_links": {
+        "selector": "section.ticket-item div.content-bar a.m-link-ticket",
+        "method": {
+          "function": "attr",
+          "args": "href"
+        }
+      },
+      "pagen": {
+        "selector": "div#floatingSearchResults span#floatingSearchResultsCount",
+        "method": {
+          "function": "text",
+          "args": ""
+        }
+      }
+    },
+    "detail": {
+      "id": {
+        "selector": "aside#showLeftBarView section.m-padding ul li.item:eq(1)",
+        "method": {
+          "function": "text",
+          "args": ""
+        }
+      },
+      "published": {
+        "selector": "aside#showLeftBarView section.m-padding ul li#addDate span",
+        "method": {
+          "function": "text",
+          "args": ""
+        }
+      },
+      "name": {
+        "selector": "main.auto-content h3.auto-content_title",
+        "method": {
+          "function": "text",
+          "args": ""
+        }
+      },
+      "mileage": {
+        "selector": "main.auto-content div.description-car dl dd.mhide span.argument",
+        "method": {
+          "function": "text",
+          "args": ""
+        }
+      },
+      "engine": {
+        "selector": "main.auto-content div.description-car dl dd:eq(2) span.argument:not(.point)",
+        "method": {
+          "function": "text",
+          "args": ""
+        }
+      },
+      "transmission": {
+        "selector": "main.auto-content div.description-car dl dd:eq(4) span.argument",
+        "method": {
+          "function": "text",
+          "args": ""
+        }
+      },
+      "fuel": {
+        "selector": "main.auto-content div.description-car dl dd:eq(2) span.argument:not(.point)",
+        "method": {
+          "function": "text",
+          "args": ""
+        }
+      },
+      "price_usd": {
+        "selector": "aside#showLeftBarView section.price div.price_value > strong",
+        "method": {
+          "function": "text",
+          "args": ""
+        }
+      },
+      "price_eur": {
+        "selector": "aside#showLeftBarView section.price div.price_value--additional span.i-block:eq(0) > span",
+        "method": {
+          "function": "text",
+          "args": ""
+        }
+      },
+      "price_grn": {
+        "selector": "aside#showLeftBarView section.price div.price_value--additional span.i-block:eq(1) > span",
+        "method": {
+          "function": "text",
+          "args": ""
+        }
+      },
+      "body": {
+        "selector": "main.auto-content div.description-car dl dd:eq(0)",
+        "method": {
+          "function": "text",
+          "args": ""
+        }
+      },
+      "color": {
+        "selector": "main.auto-content div.description-car dl dd:eq(6)",
+        "method": {
+          "function": "text",
+          "args": ""
+        }
+      },
+      "location": {
+        "selector": "aside#showLeftBarView section#userInfoBlock ul li:eq(0) div",
+        "method": {
+          "function": "text",
+          "args": ""
+        }
+      },
+      "additional": {
+        "selector": "main.auto-content div.description-car dl dd.additional-data div#full-description",
+        "method": {
+          "function": "text",
+          "args": ""
+        }
+      }
+    }
+  },
+  "options": {
+    "pagen": {
+      "regex": "page=\\d{1,}",
+      "replaсement": "page=#iterator#",
+      "correction": "-1",
+      "separator": "&"
+    }
+  }
+}

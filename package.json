@@ -1,0 +1,31 @@
+{
+  "name": "node_car_searcher",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production babel src --out-dir distr",
+    "start": "node distr/index.js",
+    "nodemon-start": "nodemon  distr/index.js",
+    "nodemon-restart": "nodetouch distr/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cheerio-eq": "^1.0.1",
+    "cherio": "^1.0.0-rc.2",
+    "express": "^4.17.1",
+    "puppeteer": "^8.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.5",
+    "cross-env": "^7.0.3",
+    "nodemon": "^2.0.7",
+    "touch": "^3.1.0"
+  }
+}

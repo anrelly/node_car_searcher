@@ -1,0 +1,82 @@
+{
+  "url": "https://automoto.ua/q/Legkovyie-avtomobili-Opel-Astra-K-Avtomat-Dizel-God-vyipuska-ot-2016-do-11000-18880783.html",
+  "service": "automoto",
+  "search" : {
+    "pages": {
+      "page_links": {
+        "selector": "div#auto-dynamic-list div#item_list div.col div.card div.card-name a",
+        "method": {"function": "attr", "args":"href"}
+      },
+      "pagen": {
+        "selector": "div#auto-dynamic-list div.tab-content > div:eq(0) div.text-secondary span.font-weight-bold",
+        "method": {"function": "text", "args":""}
+      }
+    },
+    "detail": {
+      "id": {
+        "selector": "aside#showLeftBarView section.m-padding ul li.item:eq(1)",
+        "method": {"function": "text", "args": ""}
+      },
+      "published": {
+        "selector": "main > div > div.card-list > div > div:eq(0) > div.card-page:not(.bg-blue) > div.card-content table.table-page tr:eq(6) td:eq(1)",
+        "method": {"function": "text", "args": ""}
+      },
+      "name": {
+        "selector": "main > div > div:not(.price-page) div.h3",
+        "method": {"function": "text", "args": ""}
+      },
+      "mileage": {
+        "selector": "div.main-card > div.card-body > div.row > div.col-lg-4 div.icon-group > div:eq(0)",
+        "method": {"function": "text", "args": ""}
+      },
+      "engine": {
+        "selector": "main > div > div.card-list > div > div:eq(0) > div.card-page:not(.bg-blue) > div.card-content table.table-page tr:eq(2) td:eq(1)",
+        "method": {"function": "text", "args": ""}
+      },
+      "transmission": {
+        "selector": "main > div > div.card-list > div > div:eq(0) > div.card-page:not(.bg-blue) > div.card-content table.table-page tr:eq(0) td:eq(1)",
+        "method": {"function": "text", "args": ""}
+      },
+      "fuel": {
+        "selector": "main > div > div.card-list > div > div:eq(0) > div.card-page:not(.bg-blue) > div.card-content table.table-page tr:eq(1) td:eq(1)",
+        "method": {"function": "text", "args": ""}
+      },
+      "price_usd": {
+        "selector": "div.main-card div.price > div.price-item",
+        "method": {"function": "text", "args": ""}
+      },
+      "price_eur": {
+        "selector": "div.main-card div.price div:not(.price-item) div.price-item:eq(0)",
+        "method": {"function": "text", "args": ""}
+      },
+      "price_grn": {
+        "selector": "div.main-card div.price div:not(.price-item) div.price-item:eq(1)",
+        "method": {"function": "text", "args": ""}
+      },
+      "body": {
+        "selector": "main > div > div.card-list > div > div:eq(0) > div.card-page:not(.bg-blue) > div.card-content table.table-page tr:eq(4) td:eq(1)",
+        "method": {"function": "text", "args": ""}
+      },
+      "color": {
+        "selector": "main > div > div.card-list > div > div:eq(0) > div.card-page:not(.bg-blue) > div.card-content table.table-page tr:eq(5) td:eq(1)",
+        "method": {"function": "text", "args": ""}
+      },
+      "location": {
+        "selector": "div.main-card > div.card-body > div.row > div.col-lg-4 div.icon-group > div:eq(2)",
+        "method": {"function": "text", "args": ""}
+      },
+      "additional": {
+        "selector": "main.auto-content div.description-car dl dd.additional-data div#full-description",
+        "method": {"function": "text", "args": ""}
+      }
+    }
+  },
+  "options": {
+    "pagen": {
+      "regex": "page=\\d{1,}",
+      "replaсement": "page=#iterator#",
+      "correction": "0",
+      "separator": "?"
+    }
+  }
+}
